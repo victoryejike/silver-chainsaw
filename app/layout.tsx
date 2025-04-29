@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dm_sans.variable} antialiased px-3 lg:px-18 pt-6 pb-12 font-sans`}
+        className={`${dm_sans.variable} antialiased px-3 lg:px-18 pt-6 pb-12 font-sans bg-white lg:bg-background`}
       >
         <Header />
         <main>{children}</main>
