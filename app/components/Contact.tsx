@@ -5,23 +5,23 @@ const Contact = () => {
     <section className="pb-8 pt-5 lg:pt-14 px-3 lg:px-11" id="contact">
       <div className="flex flex-col lg:flex-row justify-between items-center gap-x-[134px] bg-[#EEF2F9] rounded-4xl w-full pt-5 lg:pt-21 pb-16">
         <div className=" w-full lg:w-5/12 pl-0 mx-4 lg:pl-[65px] lg:mx-auto">
-          <p className="font-semibold text-sm text-primary py-2 px-3 bg-[#D2DCEF] w-34 text-center rounded-lg lg:mx-auto">
+          <p className="font-semibold text-sm text-primary py-2 px-3 bg-[#D2DCEF] w-34 text-center rounded-lg mx-auto lg:mx-0">
             Contact Us
           </p>
           <p className="text-center lg:text-left font-bold text-[24px] pt-4 text-[#222222]">
             Need SOM services?
           </p>
-          <p className="text-sm lg:text-lg pt-2 text-center lg:text-left text-[#595E63]">
+          <p className="text-sm lg:text-lg pt-2 text-center lg:text-left text-[#595E63] px-4 lg:px-0">
             We specialize in the supply of security and safety equipment,
             security training and design.
           </p>
-          <p className="text-sm lg:text-lg pt-4 text-center lg:text-left text-[#595E63]">
+          <p className="text-sm lg:text-lg pt-4 text-center lg:text-left text-[#595E63] px-4 lg:px-0">
             10 Oke Street Pedro, Gbagada, Lagos, Nigeria.
           </p>
-          <p className="text-sm lg:text-lg pt-4 text-center lg:text-left text-[#595E63]">
+          <p className="text-sm lg:text-lg pt-4 text-center lg:text-left text-[#595E63] px-4 lg:px-0">
             08037791851
           </p>
-          <p className="text-sm lg:text-lg pt-4 text-center lg:text-left text-[#595E63]">
+          <p className="text-sm lg:text-lg pt-4 text-center lg:text-left text-[#595E63] px-4 lg:px-0">
             © 2025 SOM. All rights reserved
           </p>
         </div>

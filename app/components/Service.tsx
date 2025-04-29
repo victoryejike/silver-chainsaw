@@ -5,7 +5,7 @@ import { services } from "../lib/data";
 const Service = () => {
   return (
     <div>
-      <p className="font-semibold text-sm text-primary py-2 px-3 bg-[#D2DCEF] w-34 rounded-lg text-center mx-auto">
+      <p className="font-semibold text-sm text-primary py-2 px-3 bg-[#D2DCEF] w-34 rounded-lg mx-auto">
         Service Offering
       </p>
       <p className="text-center font-bold text-2xl lg:text-[40px] pt-4">
