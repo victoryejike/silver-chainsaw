@@ -14,21 +14,18 @@ export async function POST(req: Request) {
     }
 
     const transporter = nodemailer.createTransport({
-      host: "mail.yourdomain.com", // Replace with your mail server
-      port: 465, // Or 465 for SSL
-      secure: true, // true for port 465, false for others
+      host: "sandbox.smtp.mailtrap.io", // Replace with your mail server
+      port: 2525, // Or 465 for SSL
+      // secure: true, // true for port 465, false for others
       auth: {
         user: process.env.MAIL_USER, // Your mail server username
         pass: process.env.MAIL_PASS, // Your mail server password
       },
-      tls: {
-        rejectUnauthorized: false, // Optional, useful for self-signed certs
-      },
     });
 
     await transporter.sendMail({
-      from: process.env.MAIL_USER,
-      to: "contact@yourdomain.com", // Designated recipient email
+      from: "no-reply@example.com",
+      to: "victoryejike@gmail.com", // Designated recipient email
       subject: `Contact Us from ${name || "Anonymous"}`,
       text: message,
       replyTo: email,
