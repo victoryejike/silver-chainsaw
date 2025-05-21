@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +12,13 @@ const Contact = () => {
   const [status, setStatus] = useState<
     "idle" | "sending" | "success" | "error"
   >("idle");
+
+  useEffect(() => {
+    if (status === "success" || status === "error") {
+      const timer = setTimeout(() => setStatus("idle"), 3000);
+      return () => clearTimeout(timer); // Cleanup on unmount or re-render
+    }
+  }, [status]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -120,13 +127,15 @@ const Contact = () => {
                 disabled={status === "sending"}
                 className="py-4 w-full bg-primary rounded-lg mt-7 text-white cursor-pointer"
               >
-                {status === "sending" ? "Sending..." : "Submit"}
+                {status === "sending"
+                  ? "Sending..."
+                  : status === "success"
+                  ? "Message sent"
+                  : "Submit"}
               </button>
-              {status === "success" && (
-                <p className="text-green-600">Message sent successfully!</p>
-              )}
+
               {status === "error" && (
-                <p className="text-red-600">
+                <p className="text-red-600 pt-2">
                   Something went wrong. Please try again.
                 </p>
               )}
